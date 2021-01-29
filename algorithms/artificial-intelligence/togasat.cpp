@@ -584,7 +584,7 @@ public:
       if (line.size() > 0)
       {
         if (line[0] == 'p')
-          sscanf(line.c_str(), "p cnf %d %d", &vars, &clauses);
+          scanf_c(line.c_str(), "p cnf %d %d", &vars, &clauses);
         else if (line[0] == 'c' or line[0] == 'p')
           continue;
         else
@@ -640,7 +640,7 @@ public:
         if (assigns[i] == 0)
           std::cout << (i + 1) << " ";
         else
-          std::cout << -(i + 1) << " ";
+          std::cout << -1*(i + 1) << " ";
       }
       std::cout << "0" << std::endl;
     }
